@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<link rel="stylesheet" href="{% static 'index.css' %}" />
+		<title>My Pet</title>
+	</head>
+	<body>
+		<div class="header">My Pet</div>
+		<div class="content">
+			<div class="title">로그인</div>
+			<form class="login-form">
+				<span
+					><label for="ID">ID</label>
+					<input type="text" id="ID" placeholder="아이디를 입력하세요"
+				/></span>
+				<span
+					><label for="PW">PW</label>
+					<input type="password" id="PW" placeholder="패스워드를 입력하세요"
+				/></span>
+				<button type="submit" value="GO" class="submit">GO</button>
+			</form>
+		</div>
+	</body>
+</html>
