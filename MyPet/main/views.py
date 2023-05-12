@@ -3,8 +3,7 @@ from .models import Post
 
 # Create your views here.
 
-def index(request):
-    return render(request,'index.html')
+
 
 def feed(request):
     # 모든 Post를 가져와 postlist에 저장합니다

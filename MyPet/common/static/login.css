@@ -13,7 +13,7 @@ label {
 	width: 100%;
 	text-align: center;
 	margin: auto;
-	margin-bottom: 150px;
+	margin-bottom: 100px;
 	padding: 20px;
 	box-shadow: 0px 4px 27px rgb(192, 192, 192);
 	font-size: 3rem;
@@ -23,7 +23,7 @@ label {
 .title {
 	text-align: center;
 	margin: auto;
-	margin-bottom: 50px;
+	margin-bottom: 30px;
 	font-size: 2rem;
 	font-weight: 700;
 }
