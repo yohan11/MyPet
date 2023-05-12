@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<link rel="stylesheet" href="{% static 'upload.css' %}" />
+		<script
+			src="https://kit.fontawesome.com/e23cdb4573.js"
+			crossorigin="anonymous"
+		></script>
+		<script src="{% static 'upload.js' %}"></script>
+		<title>My Pet</title>
+	</head>
+	<body>
+		<div class="header">My Pet</div>
+		<div class="container top">
+			<div class="title">내 반려동물 자랑하기!</div>
+		</div>
+		<form class="container content">
+			<div>
+				<label for="input-img"> 사진 </label>
+				<div class="input-img-container">
+					<input type="file" onchange="readURL(this);" id="input-img" />
+					<img id="preview" />
+				</div>
+			</div>
+			<div class="input-description-container">
+				<label for="input-description"> 설명 </label>
+				<textarea type="text" id="input-description"></textarea>
+			</div>
+		</form>
+		<div class="button">
+			<button>UPLOAD</button>
+		</div>
+	</body>
+</html>

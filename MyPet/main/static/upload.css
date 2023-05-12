@@ -1,0 +1,91 @@
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/static/pretendard.css");
+
+body {
+	margin: 0;
+	font-family: "Pretendard Variable";
+}
+
+button {
+	text-align: center;
+	margin: auto;
+	width: 20%;
+	height: 10%;
+	padding: 15px;
+	border-radius: 10px;
+	background-color: #cfc3ff;
+	font-weight: 600;
+	font-size: 1.2rem;
+	border: none;
+	box-shadow: 0px 4px 4px rgb(192, 192, 192);
+}
+
+button:hover {
+	background: #7d61ed;
+	color: white;
+	cursor: pointer;
+}
+
+.container {
+	margin: 70px;
+}
+
+.header {
+	width: 100%;
+	text-align: center;
+	margin: auto;
+	margin-bottom: 100px;
+	padding: 20px 0;
+	box-shadow: 0px 4px 27px rgb(192, 192, 192);
+	font-size: 3rem;
+	font-weight: 900;
+}
+
+.title {
+	text-align: center;
+	margin: auto;
+	font-size: 2.5rem;
+	font-weight: 700;
+}
+
+#preview {
+	width: 100%;
+	margin-top: 20px;
+}
+
+.input-img-container {
+	display: block;
+	width: 60%;
+}
+
+.content {
+	display: flex;
+	justify-content: space-around;
+}
+
+#input-description {
+	width: 100%;
+	padding: 10px;
+	vertical-align: top;
+}
+
+.content > div {
+	display: flex;
+	width: 50%;
+}
+
+label {
+	margin-right: 10px;
+	width: 50px;
+	font-size: 1.3rem;
+	font-weight: 500;
+}
+
+.input-description-container {
+	width: 40%;
+	height: 300px;
+}
+
+.button {
+	text-align: center;
+	margin: auto;
+}

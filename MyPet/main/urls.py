@@ -4,6 +4,7 @@ from . import views
 
 urlpatterns = [
     path('feed/', views.feed, name='feed'),
+    path('upload/', views.upload, name='upload'),
 ]
 
 

@@ -14,7 +14,9 @@
 		<div class="header">My Pet</div>
 		<div class="container top">
 			<div class="title">둘러보기</div>
-			<button>나도 자랑할래!</button>
+			<button onclick="location.href='{% url 'upload' %}'">
+				나도 자랑할래!
+			</button>
 		</div>
 		<div class="container content">
 			<div class="left-post">
@@ -39,9 +41,7 @@
 					<img src="{{ post.img.url }}" class="post-img" />
 					<div class="post-content">
 						<div class="post-description">{{post.description}}</div>
-						<div class="post-likes">
-							<a><i class="fas fa-solid fa-heart"></i>0</a>
-						</div>
+						<div class="post-likes"><i class="fas fa-solid fa-heart"></i>0</div>
 					</div>
 				</li>
 			</div>

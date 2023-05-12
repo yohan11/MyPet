@@ -11,3 +11,6 @@ def feed(request):
     # blog.html 페이지를 열 때, 모든 Post인 postlist도 같이 가져옵니다 
     return render(request, 'feed.html', {'postlist':postlist})
 
+
+def upload(request):
+    return render(request,'upload.html')
