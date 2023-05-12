@@ -57,7 +57,7 @@ button:hover {
 	width: 60%;
 }
 
-.content {
+.container-input {
 	display: flex;
 	justify-content: space-around;
 }
@@ -68,7 +68,7 @@ button:hover {
 	vertical-align: top;
 }
 
-.content > div {
+.container-input > div {
 	display: flex;
 	width: 50%;
 }
@@ -88,4 +88,5 @@ label {
 .button {
 	text-align: center;
 	margin: auto;
+	margin-top: 50px;
 }

@@ -23,7 +23,9 @@
 				{% for post in postlist %} {% if not forloop.counter|divisibleby:2 %}
 				<li class="post">
 					<div class="post-user">{{post.user_id}}</div>
+					{% if post.img %}
 					<img src="{{ post.img.url }}" class="post-img" />
+					{% endif %}
 					<div class="post-content">
 						<div class="post-description">{{post.description}}</div>
 						<div class="post-likes">
@@ -38,14 +40,18 @@
 				{% for post in postlist %} {% if forloop.counter|divisibleby:2 %}
 				<li class="post">
 					<div class="post-user">{{post.user_id}}</div>
+					{% if post.img %}
 					<img src="{{ post.img.url }}" class="post-img" />
+					{% endif %}
 					<div class="post-content">
 						<div class="post-description">{{post.description}}</div>
-						<div class="post-likes"><i class="fas fa-solid fa-heart"></i>0</div>
+						<div class="post-likes">
+							<a><i class="fas fa-solid fa-heart"></i>0</a>
+						</div>
 					</div>
 				</li>
+				{% endif %} {% endfor %}
 			</div>
-			{% endif %}{% endfor %}
 		</div>
 	</body>
 </html>

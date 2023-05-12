@@ -16,21 +16,39 @@
 		<div class="container top">
 			<div class="title">내 반려동물 자랑하기!</div>
 		</div>
-		<form class="container content">
-			<div>
-				<label for="input-img"> 사진 </label>
-				<div class="input-img-container">
-					<input type="file" onchange="readURL(this);" id="input-img" />
-					<img id="preview" />
+		<form
+			action="{% url 'inputform' %}"
+			method="POST"
+			class="container content"
+			enctype="multipart/form-data"
+		>
+			{% csrf_token %}
+			<div class="container-input">
+				<div>
+					<label for="input-img"> 사진 </label>
+					<div class="input-img-container">
+						<input
+							type="file"
+							onchange="readURL(this);"
+							id="input-img"
+							name="input-img"
+						/>
+						<img id="preview" />
+					</div>
+				</div>
+				<div class="input-description-container">
+					<label for="input-description"> 설명 </label>
+					<textarea
+						type="text"
+						placeholder="내 반려동물에 대한 간단한 소개를 해주세요!"
+						name="input-description"
+						id="input-description"
+					></textarea>
 				</div>
 			</div>
-			<div class="input-description-container">
-				<label for="input-description"> 설명 </label>
-				<textarea type="text" id="input-description"></textarea>
+			<div class="button">
+				<button type="submit">UPLOAD</button>
 			</div>
 		</form>
-		<div class="button">
-			<button>UPLOAD</button>
-		</div>
 	</body>
 </html>
