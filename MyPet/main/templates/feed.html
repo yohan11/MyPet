@@ -1,18 +1,51 @@
-<html>
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
 	<head>
-		<title>Feed</title>
+		<meta charset="UTF-8" />
+		<link rel="stylesheet" href="{% static 'feed.css' %}" />
+		<script
+			src="https://kit.fontawesome.com/e23cdb4573.js"
+			crossorigin="anonymous"
+		></script>
+		<title>My Pet</title>
 	</head>
 	<body>
-		<h1>피드 페이지입니다</h1>
+		<div class="header">My Pet</div>
+		<div class="container top">
+			<div class="title">둘러보기</div>
+			<button>나도 자랑할래!</button>
+		</div>
+		<div class="container content">
+			<div class="left-post">
+				{% for post in postlist %} {% if not forloop.counter|divisibleby:2 %}
+				<li class="post">
+					<div class="post-user">{{post.user_id}}</div>
+					<img src="{{ post.img.url }}" class="post-img" />
+					<div class="post-content">
+						<div class="post-description">{{post.description}}</div>
+						<div class="post-likes">
+							<a><i class="fas fa-solid fa-heart"></i>0</a>
+						</div>
+					</div>
+				</li>
+				{% endif %} {% endfor %}
+			</div>
 
-		<table>
-			{% for list in postlist %}
-			<ul>
-				<li>{{list.description}}</li>
-				<li>{{list.user_id}}</li>
-				<li>{{list.img}}</li>
-			</ul>
-			{% endfor %}
-		</table>
+			<div class="right-post">
+				{% for post in postlist %} {% if forloop.counter|divisibleby:2 %}
+				<li class="post">
+					<div class="post-user">{{post.user_id}}</div>
+					<img src="{{ post.img.url }}" class="post-img" />
+					<div class="post-content">
+						<div class="post-description">{{post.description}}</div>
+						<div class="post-likes">
+							<a><i class="fas fa-solid fa-heart"></i>0</a>
+						</div>
+					</div>
+				</li>
+			</div>
+			{% endif %}{% endfor %}
+		</div>
 	</body>
 </html>
