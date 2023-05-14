@@ -77,4 +77,5 @@ label {
 .submit:hover {
 	background: #7d61ed;
 	color: white;
+	cursor: pointer;
 }
