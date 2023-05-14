@@ -8,13 +8,14 @@
 			src="https://kit.fontawesome.com/e23cdb4573.js"
 			crossorigin="anonymous"
 		></script>
+		<script src="{% static 'likes.js' %}"></script>
 		<title>My Pet</title>
 	</head>
 	<body>
 		<div class="header">My Pet</div>
 		<div class="container top">
 			<div class="title">둘러보기</div>
-			<button onclick="location.href='{% url 'upload' %}'">
+			<button onclick="location.href='{% url 'upload' %}'" class="goto-upload">
 				나도 자랑할래!
 			</button>
 		</div>
@@ -29,7 +30,10 @@
 					<div class="post-content">
 						<div class="post-description">{{post.description}}</div>
 						<div class="post-likes">
-							<a><i class="fas fa-solid fa-heart"></i>0</a>
+							<a class="{{post.id}} likes-btn" onClick="increaseLike(this);">
+								<i class="fas fa-solid fa-heart"></i>
+								<span id="{{post.id}}-likes-num">{{post.likes}}</span>
+							</a>
 						</div>
 					</div>
 				</li>
@@ -46,7 +50,10 @@
 					<div class="post-content">
 						<div class="post-description">{{post.description}}</div>
 						<div class="post-likes">
-							<a><i class="fas fa-solid fa-heart"></i>0</a>
+							<a class="{{post.id}}" onClick="increaseLike(this);">
+								<i class="fas fa-solid fa-heart"></i>
+								<span id="{{post.id}}-likes-num">{{post.likes}}</span>
+							</a>
 						</div>
 					</div>
 				</li>
