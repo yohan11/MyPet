@@ -18,7 +18,7 @@
 <img src="https://github.com/yohan11/MyPet/assets/40304565/48d19120-a8a6-4664-b98e-3ebcb60a0536" />
 ### 피드 페이지
 <img src="https://github.com/yohan11/MyPet/assets/40304565/a9a5bbaa-5fff-41f6-9ef2-6c5b2b981dee" />
-### 업로드 페이지
+###  업로드 페이지
 <img src="https://github.com/yohan11/MyPet/assets/40304565/00f8fe74-6d5b-43b3-a34e-7694954a3d49" />
 
 
